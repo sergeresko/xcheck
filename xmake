@@ -1,0 +1,1 @@
+gcc xcheck.c -L. -lftprintf -o xcheck
