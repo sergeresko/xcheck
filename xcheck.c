@@ -93,7 +93,7 @@ void			stop(void)
 		{
 			for (int c = 0; c < N_COLUMNS; ++c)
 				if ((i = N_ROWS * c + r + 1 ) < TESTS_NUM)
-					fprintf(stderr, "\e[32m[%2d]\e[0m%-16s", i, TEST_NAME(i));
+					fprintf(stderr, "\e[32m%2d\e[0m %-17s", i, TEST_NAME(i));
 			fprintf(stderr, "\n");
 		}
 	exit(1);
