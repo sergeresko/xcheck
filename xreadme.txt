@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-=== PREPARATION ===
+=== GETTING STARTED ===
 
 Copy the files from this directory to the root of your ft_printf repository.
 The names of all these files start with letter 'x' for convenience, so that
@@ -105,23 +105,23 @@ The name of a test is composed of the following three parts in succession:
 3.	an arbitrary sequence of alphanumeric characters
 		(a concise description)
 
-Good test names are, for example:
+Examples of good test names:
 	B_percent	(a basic test for "%%" conversion)
 	Hf_1e150	(a hard test for "%f" that checks such numbers as 10^150)
 	U_2stars	(a test for "%**", which is undefined by the standard)
 	Xs_wide		(an extra test for "%ls")
 	M_xlogin	(a test with various stuff by <xlogin> who was too lazy to
 				classify his/her test cases and give them appropriate names)
-Bad test names are, for example:
+Examples of bad test names:
 	test001
 	qweqweqwe
 
-This naming strategy allows, for example, to invoke all basic tests by running
+This naming strategy allows to invoke all basic tests by simply running
 "./x -B" or all tests for "%e" by running "./x -Xe" (see lines 63-65).
 You might have already guessed that "./x -" would execute all available tests.
 
 NOTE:	For the purposes of nice formatting, test names should be no longer
-		than 15 characters.
+		than 16 characters.
 
 
 
@@ -130,9 +130,9 @@ NOTE:	For the purposes of nice formatting, test names should be no longer
 All tests reside in a text file named "xtests.h" and are written in the form
 of macros. You're encouraged to add your own tests to that file.
 
-There are six macros: PF, TEST, END, TEST_ITER, ALL_TESTS, and T. If you
-examine "xtests.h" and have a look at the output files, you'll easily figure
-out what these macros do and how to use them.
+The following macros are employed: PF, TEST, END, TEST_ITER, ALL_TESTS, and T.
+If you examine "xtests.h" and have a look at the output files, you'll easily
+figure out what these macros do and how to use them.
 
 There are two kinds of tests: a plain test (TEST) and an iterative test
 (TEST_ITER). The names of the tests are indicated as the argument of a TEST
@@ -140,16 +140,16 @@ macro or as the first argument of a TEST_ITER macro. For instance, the
 following two tests (called "Bs_example") virtually do the same thing:
 
 1.	TEST(Bs_example)
-		PF("It %010s an %s", "is", "example")
-		PF("It %010s an %s", "could be", "example")
-		PF("It %010s an %s", "won't count as", "example")
+		PF("It %10s an %s", "is", "example")
+		PF("It %10s an %s", "could be", "example")
+		PF("It %10s an %s", "won't count as", "example")
 		PF("It %-9s an %.2s", "is", "example")
 		PF("It %-9s an %.2s", "could be", "example")
 		PF("It %-9s an %.2s", "won't count as", "example")
 	END
 
 2.	#define _Bs_example(x)\
-		PF("It %010s an %s", x, "example")\
+		PF("It %10s an %s", x, "example")\
 		PF("It %-9s an %.2s", x, "example")
 	TEST_ITER(Bs_example, "is", "could be", "won't count as")
 
