@@ -4,75 +4,75 @@
 */
 
 /* examples from the book (p. 394) */
-#define _Bd_book(n)\
-	PF("%d", n)\
-	PF("%12d", n)\
-	PF("%012d", n)\
-	PF("% 012d", n)\
-	PF("%+12d", n)\
-	PF("%+012d", n)\
-	PF("%-12d", n)\
-	PF("%- 12d", n)\
-	PF("%-+12d", n)\
-	PF("%12.4d", n)\
+#define _Bd_book(n)		\
+	PF("%d", n)			\
+	PF("%12d", n)		\
+	PF("%012d", n)		\
+	PF("% 012d", n)		\
+	PF("%+12d", n)		\
+	PF("%+012d", n)		\
+	PF("%-12d", n)		\
+	PF("%- 12d", n)		\
+	PF("%-+12d", n)		\
+	PF("%12.4d", n)		\
 	PF("%-12.4d", n)
 TEST_ITER(Bd_book, 42, -42)
 
 /* examples from the book (p. 394) */
-#define _Bu_book(n)\
-	PF("%u", n)\
-	PF("%14u", n)\
-	PF("%014u", n)\
-	PF("%#14u", n)\
-	PF("%#014u", n)\
-	PF("%-14u", n)\
-	PF("%-#14u", n)\
-	PF("%14.4u", n)\
-	PF("%-14.4u", n)\
-	PF("%-#14.4u", n)\
+#define _Bu_book(n)		\
+	PF("%u", n)			\
+	PF("%14u", n)		\
+	PF("%014u", n)		\
+	PF("%#14u", n)		\
+	PF("%#014u", n)		\
+	PF("%-14u", n)		\
+	PF("%-#14u", n)		\
+	PF("%14.4u", n)		\
+	PF("%-14.4u", n)	\
+	PF("%-#14.4u", n)	\
 	PF("%0u", n)
 TEST_ITER(Bu_book, 42, -42)
 
 /* examples from the book (p. 395) */
-#define _Bo_book(n)\
-	PF("%o", n)\
-	PF("%14o", n)\
-	PF("%014o", n)\
-	PF("%#14o", n)\
-	PF("%#014o", n)\
-	PF("%-14o", n)\
-	PF("%-#14o", n)\
-	PF("%14.4o", n)\
-	PF("%-14.4o", n)\
+#define _Bo_book(n)		\
+	PF("%o", n)			\
+	PF("%14o", n)		\
+	PF("%014o", n)		\
+	PF("%#14o", n)		\
+	PF("%#014o", n)		\
+	PF("%-14o", n)		\
+	PF("%-#14o", n)		\
+	PF("%14.4o", n)		\
+	PF("%-14.4o", n)	\
 	PF("%-#14.4o", n)
 TEST_ITER(Bo_book, 42, -42)
 
 /* examples from the book (p. 395) */
-#define _Bx_book(n)\
-	PF("%x", n)\
-	PF("%14x", n)\
-	PF("%014x", n)\
-	PF("%#14x", n)\
-	PF("%#014x", n)\
-	PF("%-14x", n)\
-	PF("%-#14x", n)\
-	PF("%14.4x", n)\
-	PF("%-14.4x", n)\
-	PF("%-#14.4x", n)\
+#define _Bx_book(n)		\
+	PF("%x", n)			\
+	PF("%14x", n)		\
+	PF("%014x", n)		\
+	PF("%#14x", n)		\
+	PF("%#014x", n)		\
+	PF("%-14x", n)		\
+	PF("%-#14x", n)		\
+	PF("%14.4x", n)		\
+	PF("%-14.4x", n)	\
+	PF("%-#14.4x", n)	\
 	PF("%0x", n)
 TEST_ITER(Bx_book, 42, -42)
 
-#define _BX_book(n)\
-	PF("%X", n)\
-	PF("%14X", n)\
-	PF("%014X", n)\
-	PF("%#14X", n)\
-	PF("%#014X", n)\
-	PF("%-14X", n)\
-	PF("%-#14X", n)\
-	PF("%14.4X", n)\
-	PF("%-14.4X", n)\
-	PF("%-#14.4X", n)\
+#define _BX_book(n)		\
+	PF("%X", n)			\
+	PF("%14X", n)		\
+	PF("%014X", n)		\
+	PF("%#14X", n)		\
+	PF("%#014X", n)		\
+	PF("%-14X", n)		\
+	PF("%-#14X", n)		\
+	PF("%14.4X", n)		\
+	PF("%-14.4X", n)	\
+	PF("%-#14.4X", n)	\
 	PF("%0X", n)
 TEST_ITER(BX_book, 42, -42)
 
@@ -85,48 +85,48 @@ TEST(Bc_book)
 END
 
 /* examples from the book (p. 397) */
-#define _Bs_book(s)\
-	PF("%s", s)\
-	PF("%12s", s)\
-	PF("%12.5s", s)\
-	PF("%012s", s)\
-	PF("%-12s", s)\
+#define _Bs_book(s)		\
+	PF("%s", s)			\
+	PF("%12s", s)		\
+	PF("%12.5s", s)		\
+	PF("%012s", s)		\
+	PF("%-12s", s)		\
 	PF("%12.10s", s)
 TEST_ITER(Bs_book, "zap", "longish", NULL)
 
 /* examples from the book (p. 398) */
-#define _Bf_book(x)\
-	PF("%f", x)\
-	PF("%10.2f", x)\
-	PF("%010.2f", x)\
-	PF("% 010.2f", x)\
-	PF("%+10.2f", x)\
-	PF("%+010.2f", x)\
-	PF("%-10.2f", x)\
-	PF("%- 10.2f", x)\
+#define _Bf_book(x)		\
+	PF("%f", x)			\
+	PF("%10.2f", x)		\
+	PF("%010.2f", x)	\
+	PF("% 010.2f", x)	\
+	PF("%+10.2f", x)	\
+	PF("%+010.2f", x)	\
+	PF("%-10.2f", x)	\
+	PF("%- 10.2f", x)	\
 	PF("%-+10.4f", x)
 TEST_ITER(Bf_book, 12.678, -12.678)
 
 /* octal without '#' */
-#define _Bo_nosharp(n)\
-	PF("%o", n)\
-	PF("%.o", n)\
-	PF("%.0o", n)\
-	PF("%.1o", n)\
-	PF("%.2o", n)\
-	PF("%.3o", n)\
+#define _Bo_nosharp(n)	\
+	PF("%o", n)			\
+	PF("%.o", n)		\
+	PF("%.0o", n)		\
+	PF("%.1o", n)		\
+	PF("%.2o", n)		\
+	PF("%.3o", n)		\
 	PF("%03o", n)
 TEST_ITER(Bo_nosharp, 0, 3, 19, 73, 100)
 
 /* octal with '#' */
-#define _Bo_sharp(n)\
-	PF("%#o", n)\
-	PF("%#.o", n)\
-	PF("%#.0o", n)\
-	PF("%#.1o", n)\
-	PF("%#.2o", n)\
-	PF("%#.3o", n)\
-	PF("%0o", n)\
+#define _Bo_sharp(n)	\
+	PF("%#o", n)		\
+	PF("%#.o", n)		\
+	PF("%#.0o", n)		\
+	PF("%#.1o", n)		\
+	PF("%#.2o", n)		\
+	PF("%#.3o", n)		\
+	PF("%0o", n)		\
 	PF("%#03o", n)
 TEST_ITER(Bo_sharp, 0, 3, 19, 73, 100)
 
@@ -137,18 +137,18 @@ TEST(X_prec_star)
 END
 
 /* pointers */
-#define _Bp(p)\
-	PF("%p", p)\
-	PF("%10p", p)\
-	PF("%.7p", p)\
-	PF("%-10p", p)\
-	PF("%-10.7p", p)\
-	PF("%0p", p)\
-	PF("%010p", p)\
-	PF("%0.7p", p)\
-	PF("%0.27p", p)\
-	PF("%-010p", p)\
-	PF("%-010.7p", p)\
+#define _Bp(p)			\
+	PF("%p", p)			\
+	PF("%10p", p)		\
+	PF("%.7p", p)		\
+	PF("%-10p", p)		\
+	PF("%-10.7p", p)	\
+	PF("%0p", p)		\
+	PF("%010p", p)		\
+	PF("%0.7p", p)		\
+	PF("%0.27p", p)		\
+	PF("%-010p", p)		\
+	PF("%-010.7p", p)	\
 	PF("%.p", p)
 TEST_ITER(Bp, NULL, ((void *)0x4242), ((void *)0x1a2b3c4d5e6f))
 
@@ -323,48 +323,48 @@ TEST(Bd_lh)
 	PF("%ld", 4294967295)
 END
 
-#define _Bs_0_and_prec(s)\
-	PF("%0.4s", s)\
+#define _Bs_0_and_prec(s)				\
+	PF("%0.4s", s)						\
 	PF("%010.4s", s)
 TEST_ITER(Bs_0_and_prec, NULL, "zap", "longish")
 
-#define _Xc_wide(wc)\
-	DISPLAY_LOCALE PF("%lc", wc)\
-	SET_LOCALE("")\
-	DISPLAY_LOCALE PF("%lc", wc)\
+#define _Xc_wide(wc)					\
+	DISPLAY_LOCALE PF("%lc", wc)		\
+	SET_LOCALE("")						\
+	DISPLAY_LOCALE PF("%lc", wc)		\
 	SET_LOCALE("C")
 TEST_ITER(Xc_wide, L't', L'щ', L'我')
 
-#define _Xs_wide(ws)\
-	DISPLAY_LOCALE PF("%ls", ws)\
-	SET_LOCALE("")\
-	DISPLAY_LOCALE PF("%ls", ws)\
+#define _Xs_wide(ws)					\
+	DISPLAY_LOCALE PF("%ls", ws)		\
+	SET_LOCALE("")						\
+	DISPLAY_LOCALE PF("%ls", ws)		\
 	SET_LOCALE("C")
 TEST_ITER(Xs_wide, NULL, L"English", L"Українська", L"中文")
 
-#define _Xc_wide_options(wc)\
-	SET_LOCALE("")\
-	DISPLAY_LOCALE PF("%-6lc", wc)\
-	DISPLAY_LOCALE PF("%2lc", wc)\
+#define _Xc_wide_options(wc)			\
+	SET_LOCALE("")						\
+	DISPLAY_LOCALE PF("%-6lc", wc)		\
+	DISPLAY_LOCALE PF("%2lc", wc)		\
 	SET_LOCALE("C")
 TEST_ITER(Xc_wide_options, L't', L'щ', L'我')
 
-#define _Xs_wide_options(ws)\
-	SET_LOCALE("")\
-	DISPLAY_LOCALE PF("%-7ls", ws)\
-	DISPLAY_LOCALE PF("%.4ls", ws)\
-	DISPLAY_LOCALE PF("%5.4ls", ws)\
+#define _Xs_wide_options(ws)			\
+	SET_LOCALE("")						\
+	DISPLAY_LOCALE PF("%-7ls", ws)		\
+	DISPLAY_LOCALE PF("%.4ls", ws)		\
+	DISPLAY_LOCALE PF("%5.4ls", ws)		\
 	SET_LOCALE("C")
 TEST_ITER(Xs_wide_options, NULL, L"English", L"Українська", L"中文")
 	
-#define _Xs_wide_context(ws)\
-	DISPLAY_LOCALE PF("ABC%lsDEF", ws)\
-	SET_LOCALE("")\
-	DISPLAY_LOCALE PF("ABC%lsDEF", ws)\
+#define _Xs_wide_context(ws)			\
+	DISPLAY_LOCALE PF("ABC%lsDEF", ws)	\
+	SET_LOCALE("")						\
+	DISPLAY_LOCALE PF("ABC%lsDEF", ws)	\
 	SET_LOCALE("C")
 TEST_ITER(Xs_wide_context, NULL, L"English", L"Українська", L"中文")
 
-#define _Bf_no_options(x)\
+#define _Bf_no_options(x)	\
 	PF("%f", x)
 TEST_ITER(Bf_no_options, -1., 3141.5926, 1.000001)
 
@@ -398,7 +398,7 @@ ALL_TESTS(
 	T(Bf_no_options) T(Hf)
 
 /*
-**	Add the names of your test here.
+**	Add the names of your tests here.
 */
 
 )
